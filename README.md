@@ -25,9 +25,9 @@
 2. Tag and push the Docker image to Docker Hub
 
 	```sh
-   docker tag ycrash username/repo:tagName
+   docker tag ycrash <dockerhub-user>/<repo-name>:<tag-name>
    
-   docker push username/repo:tagName
+   docker push <dockerhub-user>/<repo-name>:<tag-name>
    ```
 
 3. To run the container locally:
