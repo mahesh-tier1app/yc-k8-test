@@ -22,7 +22,15 @@
    docker build -t ycrash .
    ```
 
-2. To run the container locally:
+2. Tag and push the Docker image to Docker Hub
+
+	```sh
+   docker tag ycrash username/repo:tagName
+   
+   docker push username/repo:tagName
+   ```
+
+3. To run the container locally:
 
    ```sh
    docker run -ti --rm -p 8080:8080 --name ycrash -v $(pwd)/license.lic:/opt/workspace/yc/license.lic ycrash
