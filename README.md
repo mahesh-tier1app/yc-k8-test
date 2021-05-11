@@ -50,7 +50,7 @@ Kubernetes manifests (yaml) resides in `kubernetes/` directory.
 
 2. Edit `kubernetes/secret.yaml` and replace the license template with the real one.
 
-3. Change image property in the deployment.yaml to update your Docker Hub repository.
+3. Change `image` property in the `deployment.yaml` to update your Docker Hub repository.
 
 4. Assuming you have a running kubernetes cluster and kubectl ready to access the cluster, next step is to just run:
 
