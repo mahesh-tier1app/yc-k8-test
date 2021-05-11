@@ -36,7 +36,7 @@
    docker run -ti --rm -p 8080:8080 --name ycrash -v $(pwd)/license.lic:/opt/workspace/yc/license.lic ycrash
    ```
 
-   Then open http://localhost:8080 
+4. Then open http://localhost:8080 
 
 ## Kubernetes
 
@@ -50,19 +50,21 @@ Kubernetes manifests (yaml) resides in `kubernetes/` directory.
 
 2. Edit `kubernetes/secret.yaml` and replace the license template with the real one.
 
-3. Assuming you have a running kubernetes cluster and kubectl ready to access the cluster, next step is to just run:
+3. Change image property in the deployment.yaml to update your Docker Hub repository.
+
+4. Assuming you have a running kubernetes cluster and kubectl ready to access the cluster, next step is to just run:
 
    ```
    kubectl apply -f kubernetes -R
    ```
 
-4. There are a few ways of exposing a service in kubernetes to the outside. But for the initial scope, we can access it privately with:
+5. There are a few ways of exposing a service in kubernetes to the outside. But for the initial scope, we can access it privately with:
 
    ```
    kubectl port-forward svc/yc-web 8080:8080
    ```
 
-5. Then the service should be accessible from http://localhost:8080
+6. Then the service should be accessible from http://localhost:8080
 
 
 ## Notes
